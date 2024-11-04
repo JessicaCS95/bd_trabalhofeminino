@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pesquisadores</title>
+</head>
+<body>
+    <h1>Lista de Pesquisadores</h1>
+    <table border="1" width = "100%">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>E-mail</th>
+            <th>Pesquisa</th>
+        </tr>
+        <% if (pesquisadores.length > 0) { %>
+            <% for(var i =0; i < pesquisadores.length; i++) { %>
+                <tr>
+
+                <td><%-pesquisadores[i].id %></td>
+                <td><%-pesquisadores[i].nome %></td>
+                <td><%-pesquisadores[i].sobrenome %></td>
+                <td><%-pesquisadores[i].email %></td>
+                <td><%-pesquisadores[i].paragrafo %></td>
+
+                </tr>
+                
+            <% } %>
+            <% } else { %>
+                <h1>Não temos pesquisadores no Banco de Dados!</h1>
+        <% } %> 
+    </table>
+    
+</body>
+</html>
